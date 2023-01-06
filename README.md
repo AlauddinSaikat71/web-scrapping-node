@@ -7,7 +7,7 @@ The scrapper scrapes data from Otomoto.pl.
 
 ## Environment Setup
 
-After successfull cloning open the repository in a code editor which you are most comfortable.
+After successful cloning open the repository in a code editor which you are most comfortable.
 
 ## Installation
 
@@ -18,6 +18,8 @@ $ npm install
 ```
 
 ## Running the app
+
+To scrape Otomoto.pl just run this command in the terminal.
 
 ```bash
 # development
