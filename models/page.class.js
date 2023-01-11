@@ -7,7 +7,9 @@ export class Page {
 
     trucks;
 
-    constructor(currentPageUrl){
+    constructor(currentPageUrl, itemUrls, trucks){
         this.current_page_url = currentPageUrl;
+        this.item_urls = itemUrls;
+        this.trucks = trucks;
     }
 }
