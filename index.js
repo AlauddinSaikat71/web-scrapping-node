@@ -106,11 +106,9 @@ async function scrapeOtomoto(initialUrl){
 
   for(let  i=1 ; i<=totalPages ; i++){
     const $ = await scrape(currentPageUrl);
-    const page = new Page(currentPageUrl);
-
+    
     const items = await addItems($);
-    page.item_urls = items.itemUrls;
-    page.trucks = items.trucks;
+    const page = new Page(currentPageUrl, items.itemUrls, items.trucks);
 
     if(i < totalPages){
       page.next_page_url = await getNextPageUrl($, currentPageUrl);
