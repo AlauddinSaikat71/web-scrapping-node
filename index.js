@@ -29,8 +29,7 @@ export async function getNextPageUrl($, currentPageUrl) {
     const pageParam = '&page=';
     const pageParamRegex = /&page=[0-9]+/;
       if(currentPageUrl.includes(pageParam)) {
-          nextPageUrl = currentPageUrl.replace(pageParamRegex,'');
-          nextPageUrl = nextPageUrl.concat( pageParam , nextPageNumber );
+          nextPageUrl = currentPageUrl.replace(pageParamRegex,`${pageParam}${nextPageNumber}`);
         }
         else {
           nextPageUrl = currentPageUrl.concat(pageParam , nextPageNumber );
